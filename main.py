@@ -11,7 +11,7 @@ UID = ubinascii.hexlify(machine.unique_id()).decode()
 def init_wifi():
 	nic = network.WLAN(network.STA_IF)
 	nic.active(True)
-	nic.connect("CCCAC_PSK_2.4GHz", "23cccac42")
+	nic.connect("CCCAC_OPEN_2.4GHz", None)
 
 	while not nic.isconnected():
 		time.sleep_ms(100)
