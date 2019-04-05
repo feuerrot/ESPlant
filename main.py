@@ -18,7 +18,10 @@ def init_wifi():
 	print("WIFI connection established")
 
 def init_mqtt(mqtt):
-	mqtt.connect()
+	try:
+		mqtt.connect()
+	except:
+		machine.reset()
 	print("MQTT connection established")
 
 def publish_plant(sensor):
